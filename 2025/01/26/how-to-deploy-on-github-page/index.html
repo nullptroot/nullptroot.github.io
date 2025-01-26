@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/settings.7egvlw2odx.webp">
 <meta property="og:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/nodejs_download.3rbbyd6vw2.webp">
 <meta property="article:published_time" content="2025-01-26T02:20:55.000Z">
-<meta property="article:modified_time" content="2025-01-26T05:25:18.508Z">
+<meta property="article:modified_time" content="2025-01-26T07:00:32.726Z">
 <meta property="article:author" content="Boy">
 <meta property="article:tag" content="环境搭建">
 <meta name="twitter:card" content="summary">
@@ -118,7 +118,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90github-page%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">完成github page的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEhexo%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">配置hexo环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">2.1.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">主题的切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E4%B8%8Agithub-page"><span class="toc-number">2.4.</span> <span class="toc-text">连接上github page</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90github-page%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">完成github page的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEhexo%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">配置hexo环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">2.1.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">主题的切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E4%B8%8Agithub-page"><span class="toc-number">2.4.</span> <span class="toc-text">连接上github page</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95"><span class="toc-number">2.5.</span> <span class="toc-text">扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%BA%8A"><span class="toc-number">2.5.1.</span> <span class="toc-text">图床</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA"><span class="toc-number">2.5.2.</span> <span class="toc-text">评论</span></a></li></ol></li></ol></li></ol>
       </div>
     
   </span>
@@ -201,8 +201,16 @@
 
 <p>还有一个扩展需要安装的，总是忘，那就是如下命令，主要是部署到github上的</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p>图床我使用的是github作为仓库的，发现一个不错的工具，直接对接github仓库，<a target="_blank" rel="noopener" href="https://picx-docs.xpoet.cn/usage-guide/get-start.html">picX</a>，大家可以用来看看，我感觉还挺简单好用的</p>
-<p>这样就完成了，直接按照初始博客<a href="/2025/01/25/hello-world/">hello-world</a>来进行部署就行了，这个教程就先到这里，后面我对这个博客系统添加评论功能</p>
+
+<p>这样就完成了，直接按照初始博客<a href="/2025/01/25/hello-world/">hello-world</a>来进行部署就行了。</p>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><h4 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h4><p>本来是不想用图床的，但是发现不好配置，图片路径的解析不太好搞，因此我就找了一个图床，我使用的是github作为仓库的，发现一个不错的工具，直接对接github仓库，<a target="_blank" rel="noopener" href="https://picx-docs.xpoet.cn/usage-guide/get-start.html">picX</a>，大家可以用来看看，我感觉还挺简单好用的，教程非常的简单，我就不赘述了</p>
+<h4 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h4><p>评论功能这里是使用utterances了，本来是想用gitalk的，但是看见我使用的主题cactus集成了utterances。</p>
+<p>首先需要在github上<a target="_blank" rel="noopener" href="https://github.com/apps/utterances">安装utterances</a>，在打开的页面中选择 Only select repositories，并在下拉框中选择自己的博客仓库（比如我就是 nullptroot&#x2F;nullptroot.github.io，也可以安装到其他仓库），然后点击 Install就行了。</p>
+<p>后面就在需要在其配置文件<code>_config.yml</code>修改下信息就行了，搜索到<code>utterances</code>后，修改后面的配置信息成如下内容就行了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">utterances:</span><br><span class="line">  enabled: true</span><br><span class="line">  repo: &lt;username&gt;/&lt;username&gt;.github.io</span><br><span class="line">  issue_term: pathname</span><br><span class="line">  label: Comment</span><br><span class="line">  theme: github-dark</span><br></pre></td></tr></table></figure>
+
+<p>主要是<code>enabled</code>和<code>repo</code>两个字段的设置，很简单了已经。</p>
+<p>ok了，到这里基本上都已经结束了，纯纯白嫖一个带评论和图床的博客系统，大家快来啊。</p>
 
   </div>
 </article>
@@ -236,7 +244,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90github-page%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">完成github page的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEhexo%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">配置hexo环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">2.1.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">主题的切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E4%B8%8Agithub-page"><span class="toc-number">2.4.</span> <span class="toc-text">连接上github page</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90github-page%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">完成github page的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEhexo%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">配置hexo环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">2.1.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">主题的切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E4%B8%8Agithub-page"><span class="toc-number">2.4.</span> <span class="toc-text">连接上github page</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95"><span class="toc-number">2.5.</span> <span class="toc-text">扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%BA%8A"><span class="toc-number">2.5.1.</span> <span class="toc-text">图床</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA"><span class="toc-number">2.5.2.</span> <span class="toc-text">评论</span></a></li></ol></li></ol></li></ol>
       </div>
     
 
