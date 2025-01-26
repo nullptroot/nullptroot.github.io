@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="这里我来把搭建这个网站的过程记录下，可供新手朋友搭建 完成github page的创建首先先打开github官网，然后打开your repositories这个标签  然后新建一个repositories，名字是比较特殊的，为&lt;username&gt;.github.io这个格式（直接以用户名为仓库名字，是github用户首页，不错的），也就是需要自己的用户名来进行命名，如下操作  最后配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo和github page来搭建个人博客">
+<meta property="og:url" content="https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/index.html">
+<meta property="og:site_name" content="Boy&#39;s blog">
+<meta property="og:description" content="这里我来把搭建这个网站的过程记录下，可供新手朋友搭建 完成github page的创建首先先打开github官网，然后打开your repositories这个标签  然后新建一个repositories，名字是比较特殊的，为&lt;username&gt;.github.io这个格式（直接以用户名为仓库名字，是github用户首页，不错的），也就是需要自己的用户名来进行命名，如下操作  最后配置">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/repositories.77dnqggiyb.webp">
+<meta property="og:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/create_repositories.32i2ecjcvk.webp">
+<meta property="og:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/settings.7egvlw2odx.webp">
+<meta property="og:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/nodejs_download.3rbbyd6vw2.webp">
+<meta property="article:published_time" content="2025-01-26T02:20:55.000Z">
+<meta property="article:modified_time" content="2025-01-26T05:25:18.508Z">
+<meta property="article:author" content="Boy">
+<meta property="article:tag" content="环境搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/repositories.77dnqggiyb.webp">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>使用hexo和github page来搭建个人博客</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/nullptroot">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2025/01/25/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&text=使用hexo和github page来搭建个人博客"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&is_video=false&description=使用hexo和github page来搭建个人博客"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用hexo和github page来搭建个人博客&body=Check out this article: https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&name=使用hexo和github page来搭建个人博客&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&t=使用hexo和github page来搭建个人博客"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90github-page%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">完成github page的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEhexo%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">配置hexo环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">2.1.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">主题的切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E4%B8%8Agithub-page"><span class="toc-number">2.4.</span> <span class="toc-text">连接上github page</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        使用hexo和github page来搭建个人博客
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Boy</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-01-26T02:20:55.000Z" class="dt-published" itemprop="datePublished">2025-01-26</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag">环境搭建</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>这里我来把搭建这个网站的过程记录下，可供新手朋友搭建</p>
+<h2 id="完成github-page的创建"><a href="#完成github-page的创建" class="headerlink" title="完成github page的创建"></a>完成github page的创建</h2><p>首先先打开<a target="_blank" rel="noopener" href="https://github.com/">github官网</a>，然后打开your repositories这个标签</p>
+<p><img src="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/repositories.77dnqggiyb.webp" alt="打开仓库栏"></p>
+<p>然后新建一个repositories，名字是比较特殊的，为&lt;username&gt;.github.io这个格式（直接以用户名为仓库名字，是github用户首页，不错的），也就是需要自己的用户名来进行命名，如下操作</p>
+<p><img src="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/create_repositories.32i2ecjcvk.webp" alt="创建特殊仓库"></p>
+<p>最后配置下仓库信息如下步骤</p>
+<p><img src="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/settings.7egvlw2odx.webp" alt="完成仓库配置"></p>
+<h2 id="配置hexo环境"><a href="#配置hexo环境" class="headerlink" title="配置hexo环境"></a>配置hexo环境</h2><h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><p>hexo是需要nodejs环境的，因此我们需要先安装nodejs，我是比较喜欢安装二进制格式的软件，然后设置环境变量，因为比较感觉，黑盒过程比较少，因此这里使用二进制安装nodejs，<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download">nodejs官方下载</a>，二进制格式下载如下：</p>
+<p><img src="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/nodejs_download.3rbbyd6vw2.webp" alt="nodejs下载"></p>
+<p>这里我使用的是linux格式，还是linux格式适合开发环境，我是使用的wsl linux子系统，还是可以的，推荐大家使用，我们把下载的压缩包解压，这里命令如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf node-v22.13.1-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+
+<p>然后配置环境变量，这里我都是把后面需要添加的环境变量添加到<code>~/.bashrc</code>中，添加如下代码:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH://path/node-v22.13.1-linux-x64/bin</span><br></pre></td></tr></table></figure>
+
+<p>然后执行下命令<code>source ~/.bashrc</code>激活环境即可，执行下<code>node -v</code> 和<code>npm -v</code>显示版本号，既是安装成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mr4@DESKTOP-7BS4T8L:~$ node -v</span><br><span class="line">v22.13.1</span><br><span class="line">mr4@DESKTOP-7BS4T8L:~$ npm -v</span><br><span class="line">10.9.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>国内环境的原因嗷，这里最好使用nodejs设置国内源，虽然我已经魔法上网了，但是还是建议设置国内源，具体的网上搜一下就行，我就不赘述了，下面我讲下咋配置。</p>
+<p>首先创建一个文件夹，这里是来保存hexo环境的目录，当然后面你写的文章也会在这个目录中，这里我为这个目录命名为<code>blog_doc</code>，然后开始安装hexo配置环境，如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog_doc</span><br><span class="line">cd blog_doc</span><br><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>hexo -v</code>检测hexo是否安装成功，然后就可以初始化项目了，如下命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>经过上面的教程就算是安装完成了，这是本地的静态博客系统完成了，可以根据本博客的初始博客<a href="/2025/01/25/hello-world/">hello-world</a>教程来搞了，添加文章，部署到本地的教程。</p>
+<h3 id="主题的切换"><a href="#主题的切换" class="headerlink" title="主题的切换"></a>主题的切换</h3><p>下面来搞一个主题，这里我以<code>cactus</code>来为例子，感觉这个主题比较简约，我喜欢，如下命令嗷（其他主题一样，直接找到其github主页看他的教程就行了）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog_doc</span><br><span class="line">git clone git@github.com:probberechts/hexo-theme-cactus.git themes/cactus</span><br></pre></td></tr></table></figure>
+
+<p>然后配置下<code>blog_doc</code>根目录下面的文件<code>_config.yml</code>，找到关键字<code>theme</code>，如下配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">theme: landscape</span></span><br><span class="line">theme: cactus</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以完成主题的切换了</p>
+<h3 id="连接上github-page"><a href="#连接上github-page" class="headerlink" title="连接上github page"></a>连接上github page</h3><p>主要是对<code>_config.yml</code>进行配置，在文件末尾添加下面的代码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repository: git@github.com:nullptroot/&lt;username&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>还有一个扩展需要安装的，总是忘，那就是如下命令，主要是部署到github上的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p>图床我使用的是github作为仓库的，发现一个不错的工具，直接对接github仓库，<a target="_blank" rel="noopener" href="https://picx-docs.xpoet.cn/usage-guide/get-start.html">picX</a>，大家可以用来看看，我感觉还挺简单好用的</p>
+<p>这样就完成了，直接按照初始博客<a href="/2025/01/25/hello-world/">hello-world</a>来进行部署就行了，这个教程就先到这里，后面我对这个博客系统添加评论功能</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/nullptroot">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90github-page%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">完成github page的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEhexo%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">配置hexo环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85nodejs"><span class="toc-number">2.1.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">主题的切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E4%B8%8Agithub-page"><span class="toc-number">2.4.</span> <span class="toc-text">连接上github page</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&text=使用hexo和github page来搭建个人博客"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&is_video=false&description=使用hexo和github page来搭建个人博客"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用hexo和github page来搭建个人博客&body=Check out this article: https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&title=使用hexo和github page来搭建个人博客"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&name=使用hexo和github page来搭建个人博客&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nullptroot.github.io/2025/01/26/how-to-deploy-on-github-page/&t=使用hexo和github page来搭建个人博客"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    Boy
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/nullptroot">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
