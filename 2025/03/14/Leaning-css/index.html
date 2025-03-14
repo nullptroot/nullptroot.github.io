@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="css学习语法两个部分，分别是选择器和属性声明，选择器是用来选择html中的（伪）元素&#x2F;（伪）类&#x2F;ID的，后面跟着属性的声明和值就是css的语法规则，如下图所示，非常简单。  来个例子简单解释下，如下面的代码，其中p就是html中的元素，，后面花括号就是这个元素的样式属性的设置，每个属性使用分号隔离，可以设置多个属性，当html引用这个样式的时候，就会按照属性的方式进行渲染这个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一篇搞懂css">
+<meta property="og:url" content="https://nullptroot.github.io/2025/03/14/Leaning-css/index.html">
+<meta property="og:site_name" content="Boy&#39;s blog">
+<meta property="og:description" content="css学习语法两个部分，分别是选择器和属性声明，选择器是用来选择html中的（伪）元素&#x2F;（伪）类&#x2F;ID的，后面跟着属性的声明和值就是css的语法规则，如下图所示，非常简单。  来个例子简单解释下，如下面的代码，其中p就是html中的元素，，后面花括号就是这个元素的样式属性的设置，每个属性使用分号隔离，可以设置多个属性，当html引用这个样式的时候，就会按照属性的方式进行渲染这个">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/yufa.102blaftvd.webp">
+<meta property="article:published_time" content="2025-03-14T01:44:43.000Z">
+<meta property="article:modified_time" content="2025-03-14T01:49:03.397Z">
+<meta property="article:author" content="Boy">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/yufa.102blaftvd.webp">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>一篇搞懂css</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/nullptroot">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2025/01/26/how-to-deploy-on-github-page/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nullptroot.github.io/2025/03/14/Leaning-css/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&text=一篇搞懂css"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&is_video=false&description=一篇搞懂css"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=一篇搞懂css&body=Check out this article: https://nullptroot.github.io/2025/03/14/Leaning-css/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&name=一篇搞懂css&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nullptroot.github.io/2025/03/14/Leaning-css/&t=一篇搞懂css"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#css%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">css学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E5%A6%82%E4%BD%95%E9%80%89"><span class="toc-number">1.2.</span> <span class="toc-text">选择器如何选</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.1.</span> <span class="toc-text">元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">1.2.2.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ID"><span class="toc-number">1.2.3.</span> <span class="toc-text">ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%AA%E7%9A%84"><span class="toc-number">1.2.4.</span> <span class="toc-text">伪的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E8%A7%84%E5%88%99"><span class="toc-number">1.2.5.</span> <span class="toc-text">组合规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.6.</span> <span class="toc-text">属性选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">媒体类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8css"><span class="toc-number">1.4.</span> <span class="toc-text">如何使用css</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        一篇搞懂css
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Boy</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-03-14T01:44:43.000Z" class="dt-published" itemprop="datePublished">2025-03-14</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="css学习"><a href="#css学习" class="headerlink" title="css学习"></a>css学习</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>两个部分，分别是选择器和属性声明，选择器是用来选择html中的（伪）元素&#x2F;（伪）类&#x2F;ID的，后面跟着属性的声明和值就是css的语法规则，如下图所示，非常简单。</p>
+<p><img src="https://github.com/nullptroot/picx-images-hosting/raw/master/blog_images/yufa.102blaftvd.webp"></p>
+<p>来个例子简单解释下，如下面的代码，其中p就是html中的元素，，后面花括号就是这个元素的样式属性的设置，每个属性使用分号隔离，可以设置多个属性，当html引用这个样式的时候，就会按照属性的方式进行渲染这个元素，下面的样式就是将段落元素中的内容搞成红色的，并且居中，不理解这些属性和属性的值没有关系，css这些东西太多了，根本不用记住，掌握规则，一切简单，这就是语法。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">    <span class="attribute">text-align</span>:center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>讲完了语法，下面我分几个部分，让大家快速掌握css这个技术。</p>
+<h2 id="选择器如何选"><a href="#选择器如何选" class="headerlink" title="选择器如何选"></a>选择器如何选</h2><p>我们第一步要解决的就是选择器如何选，也就是选择器的规则，毕竟这个规则直接确定我们要设置样式的主体，因此我们先介绍。选择器主要选择的有五种东西吧，分别是html中的元素、类、伪元素、伪类和ID属性的元素，这分别是啥东西呢，不用太理解，就当他们是需要设置样式的主体就行，然后我们来介绍下这五个东西是咋选的，啥规则就选择这五个中的一个了。</p>
+<h3 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h3><p>首先是元素，这个比较简单，直接就是html中的元素，比如&lt;p&gt;&lt;&#x2F;p&gt;、&lt;a&gt;&lt;&#x2F;a&gt;和&lt;div&gt;&lt;&#x2F;div&gt;等等，直接将其放到语法的第一部分就行，这样就会对html中这些元素进行样式设置，如下面代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>然后是类，类的话也简单，是针对html中所有元素class属性值的选择，比如下面代码就会将所有元素中class值伪apple的元素设置样式，前面的元素是可有可无的，如果只针对特定元素的class属性，就加上，否则就是全局class属性。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;元素&#125;<span class="selector-class">.apple</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ID"><a href="#ID" class="headerlink" title="ID"></a>ID</h3><p>ID的话是针对选择元素中有ID属性的，语法比较特异，比较容易识别，如下代码，ID的话只能选择一个元素，因为ID是唯一的，有#的就是ID。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#para1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">text-align</span>:center;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="伪的"><a href="#伪的" class="headerlink" title="伪的"></a>伪的</h3><p>伪类和伪元素语法一样，就一块说，就是伪的，语法就是正经元素或者类后面加个冒号来指明，这些伪的东西不多，也不用记，看见这种语法就知道是伪的就行了，语法如下，擦不用如下了，选择器部分带冒号的全是伪的（有些伪的只有特定元素有，有些伪的可以单独使用），下面给个例子吧，有时候我们在某些网页上点击连接后，连接的颜色会变，这个功能就是伪的做的，也就是下面代码中的<code>a:visited</code>，懂了吧，这些就是伪类。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> &#123;<span class="attribute">color</span>:<span class="number">#FF0000</span>;&#125; <span class="comment">/* 未访问的链接 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> &#123;<span class="attribute">color</span>:<span class="number">#00FF00</span>;&#125; <span class="comment">/* 已访问的链接 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;<span class="attribute">color</span>:<span class="number">#FF00FF</span>;&#125; <span class="comment">/* 鼠标划过链接 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span> &#123;<span class="attribute">color</span>:<span class="number">#0000FF</span>;&#125; <span class="comment">/* 已选中的链接 */</span></span><br></pre></td></tr></table></figure>
+<h3 id="组合规则"><a href="#组合规则" class="headerlink" title="组合规则"></a>组合规则</h3><p>还有一个就是组合规则了，根据组合规则来选择一些特定的元素一共有四个</p>
+<ul>
+<li><p><code> </code>空格表示所有后代的元素都选中，如下面的代码div元素下面的p全部选中</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>&gt;</code>表示子元素选中，也就是一个元素的子元素（一级）全部选中，下面代码就是div的所有子p选中孙p不行</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&gt;<span class="selector-tag">p</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>+</code>表示相邻同级的选中，仅后面相邻的一个元素，同父的，下面的代码就是将紧跟着div后面的p元素选中</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>+<span class="selector-tag">p</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>~</code> 表示后续同级元素都选中，如下面代码表示div后面的所有同父p选中</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>~<span class="selector-tag">p</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">background-color</span>:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p>上面都是对某些元素等进行选中，这个属性选择器是直接针对属性进行选择的，包含这个属性的全部选中，规则就是在选择器部分有中括号括住的语法，如下代码，本来想详细介绍下的，但是我看了下这个规则，竟然有7种，太多了，我就不讲了，遇见这种语法的属性，将里面的内容拿出来搜一下就行了。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[attribute]</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>好，选择器讲完了，基本上也就算是完了，属性太多了，不用讲，讲了也记不住，遇见直接搜就行，上面的规则记一下就行了。</p>
+<h2 id="媒体类型"><a href="#媒体类型" class="headerlink" title="媒体类型"></a>媒体类型</h2><p>这个语法简单介绍下，就是如下代码的样式，会根据媒体类型来渲染不同的样式，最常见的就是手机浏览网页和电脑不一样，就是采用这种方式实现的，类型也有点多，还是那句话，不讲了，见到这种类型语法直接搜。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> 媒体类型 &#123; css样式 &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何使用css"><a href="#如何使用css" class="headerlink" title="如何使用css"></a>如何使用css</h2><p>css和html是紧紧相连的，没有html就没有css，因此使用css也只能是html，这里就介绍下html如何使用css，主要是三种方式</p>
+<ul>
+<li><p>内联样式，也就是在html元素中使用<code>style</code>属性</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color:blue;margin-left:20px;&quot;</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>内部样式表，就是在html<code>head</code>部分添加<code>&lt;style&gt;</code>标签来全局使用</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-tag">body</span> &#123;<span class="attribute">background-color</span>:yellow;&#125;</span></span><br><span class="line"><span class="language-css"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:blue;&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>外部样式表，当样式应用在很多页面的时候，通常使用外部样式表，也是在<code>head</code>部分，如下代码</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;mystyle.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>ok了兄弟们，完活，随便学一下，用到啥搜啥。</p>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/nullptroot">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#css%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">css学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E5%A6%82%E4%BD%95%E9%80%89"><span class="toc-number">1.2.</span> <span class="toc-text">选择器如何选</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.1.</span> <span class="toc-text">元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">1.2.2.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ID"><span class="toc-number">1.2.3.</span> <span class="toc-text">ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%AA%E7%9A%84"><span class="toc-number">1.2.4.</span> <span class="toc-text">伪的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E8%A7%84%E5%88%99"><span class="toc-number">1.2.5.</span> <span class="toc-text">组合规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.6.</span> <span class="toc-text">属性选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">媒体类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8css"><span class="toc-number">1.4.</span> <span class="toc-text">如何使用css</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nullptroot.github.io/2025/03/14/Leaning-css/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&text=一篇搞懂css"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&is_video=false&description=一篇搞懂css"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=一篇搞懂css&body=Check out this article: https://nullptroot.github.io/2025/03/14/Leaning-css/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&title=一篇搞懂css"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nullptroot.github.io/2025/03/14/Leaning-css/&name=一篇搞懂css&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nullptroot.github.io/2025/03/14/Leaning-css/&t=一篇搞懂css"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    Boy
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/nullptroot">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'nullptroot/nullptroot.github.io';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>
